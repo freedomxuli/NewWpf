@@ -1,0 +1,8 @@
+﻿<Extension Point="UIShell.NavigationService">
+  <Node  Id="" Name="" Order="" Permission="" Icon="" Tooltip="">
+    <Node Id="" Name="" Value="" Order="" Permission=""  Icon="" Tooltip="" />
+  </Node>
+  <Node  Id="" Name="" Order="" Permission=""  Icon="" Tooltip="">
+    <Node ParentNodeId="" Id="" Name="" Value="" Order="" Permission=""  Icon="" Tooltip="" />
+  </Node>
+</Extension>

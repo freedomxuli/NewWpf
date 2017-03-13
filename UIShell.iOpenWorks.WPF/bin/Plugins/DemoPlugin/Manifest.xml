@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="DemoPlugin" SymbolicName="DemoPlugin" Version="1.0.0.0" InitializedState="Active" StartLevel="100">
+  <Activator Type="DemoPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\DemoPlugin.dll" Share="false" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="UIShell.WpfShellPlugin" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.PermissionService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.ConfigurationService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.DbConnectionFactoryService" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="UIShell.NavigationService">
+    <Node Name="演示" Order="480" Icon="/DemoPlugin;component/Assets/demo.png">
+      <Node Name="演示界面" Value="DemoPlugin.CourseManagementUserControl" Permission="CourseManagementPermission" Icon="/DemoPlugin;component/Assets/demo.png" Order="1" />
+    </Node>
+  </Extension>
+  <Extension Point="UIShell.PermissionService">
+    <PermissionGroup Id="CourseManagementPermissionGroup" Name="演示">
+      <Permission Id="CourseManagementPermission" Name="课程管理" />
+    </PermissionGroup>
+  </Extension>
+</Bundle>

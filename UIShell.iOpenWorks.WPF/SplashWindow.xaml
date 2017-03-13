@@ -1,0 +1,11 @@
+﻿<Window x:Class="UIShell.iOpenWorks.WPF.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ShowInTaskbar="False" ResizeMode="NoResize" 
+        Title="SplashWindow" Height="425" BorderBrush="CadetBlue" BorderThickness="2" Width="500" WindowStartupLocation="CenterScreen" Icon="iopenworks.ico" WindowStyle="None">
+
+    <StackPanel>
+        <Image Source="Splash.png" Margin="16" />
+        <TextBlock Margin="16" Width="486" TextAlignment="Center" Text="力殿下Demo" Foreground="#aaaaaa" FontSize="24" />
+        <TextBlock Margin="16" Width="486" TextAlignment="Center" Text="" Foreground="#aaaaaa" FontSize="18" Name="MessageTextBlock" />
+    </StackPanel>
+</Window>

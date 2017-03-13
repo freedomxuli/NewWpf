@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="UIShell.RbacManagementPlugin.AddOrEditUserUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIShell.RbacManagementPlugin.ViewModels"
+             xmlns:utility="clr-namespace:UIShell.WpfShellPlugin.Utility;assembly=UIShell.WpfShellPlugin"
+             mc:Ignorable="d" Name="AddUserUserControl"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:AddOrEditUserViewModel x:Key="AddOrEditUserViewModel"></local:AddOrEditUserViewModel>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <StaticResource ResourceKey="AddOrEditUserViewModel"/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="姓名：" />
+        <TextBox Grid.Column="1" Grid.Row="0" Name="DisplayNameTextBox" Text="{Binding UserViewModel.DisplayName, Mode=TwoWay}" Height="28" VerticalAlignment="Top" utility:FocusUtility.AutoFocusAfterLoaded="True" utility:FocusUtility.MoveFocusWhenEnterPressed="True" utility:FocusUtility.SelectAllAfterFocused="True" />
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="登录名称：" />
+        <TextBox Grid.Column="1" Grid.Row="1" Name="NameTextBox" Height="28" Text="{Binding UserViewModel.Name, Mode=TwoWay}" VerticalAlignment="Top" utility:FocusUtility.MoveFocusWhenEnterPressed="True" utility:FocusUtility.SelectAllAfterFocused="True" />
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="密码：" />
+        <TextBox Grid.Column="1" Grid.Row="2" Name="PasswordTextBox" Height="28" Text="{Binding UserViewModel.Password,Mode=TwoWay}" VerticalAlignment="Top" utility:FocusUtility.MoveFocusWhenEnterPressed="True" utility:FocusUtility.SelectAllAfterFocused="True" />
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="角色：" />
+        <ComboBox Grid.Column="1" Grid.Row="3" Name="RoleComboBox" Height="28" VerticalAlignment="Top" SelectedValuePath="Id" DisplayMemberPath="Name" SelectedValue="{Binding UserViewModel.RoleId, Mode=TwoWay}" ItemsSource="{Binding Roles}" utility:FocusUtility.MoveFocusWhenEnterPressed="True" />
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button Width="80" Margin="2" Name="YesButton" Command="{Binding OkCommand}" CommandParameter="{Binding ElementName=AddUserUserControl}">
+                <DockPanel>
+                    <Image Width="15" Height="15" Stretch="Fill" Margin="0,0,2,0" Source="/UIShell.RbacManagementPlugin;component/Assets/yes.png" />
+                    <TextBlock VerticalAlignment="center" Text="保存" />
+                </DockPanel>
+            </Button>
+            <Button Width="80" Margin="2" Name="NoButton" IsCancel="True" Command="{Binding CancelCommand}" CommandParameter="{Binding ElementName=AddUserUserControl}">
+                <DockPanel>
+                    <Image Width="15" Height="15" Stretch="Fill" Margin="0,0,2,0" Source="/UIShell.RbacManagementPlugin;component/Assets/no.png" />
+                    <TextBlock VerticalAlignment="center" Text="取消" />
+                </DockPanel>
+            </Button>
+        </StackPanel>
+        
+        <TextBlock Grid.Column="0" Grid.Row="5" Grid.RowSpan="2" Text="{Binding Error}" Foreground="Red" />
+    </Grid>
+</UserControl>

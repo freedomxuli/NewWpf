@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<UpdateRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UpdateRecords>
+    <UpdateRecordItem>
+      <CoreFileId>1</CoreFileId>
+      <CoreFileType>OSGi</CoreFileType>
+      <UpdateDate>2015-01-23T11:06:30.01225</UpdateDate>
+      <Version>1.2.2.5</Version>
+    </UpdateRecordItem>
+    <UpdateRecordItem>
+      <CoreFileId>9</CoreFileId>
+      <CoreFileType>BundleRepositoryOpenAPI</CoreFileType>
+      <UpdateDate>2013-04-03T14:06:45.199875</UpdateDate>
+      <Version>1.0.0.0</Version>
+    </UpdateRecordItem>
+  </UpdateRecords>
+  <LastCheckDateTime>2017-03-13T19:54:38.6392126+08:00</LastCheckDateTime>
+</UpdateRecord>

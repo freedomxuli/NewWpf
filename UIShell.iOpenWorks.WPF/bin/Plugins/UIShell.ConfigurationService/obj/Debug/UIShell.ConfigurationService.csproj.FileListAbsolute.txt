@@ -1,0 +1,12 @@
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.ConfigurationService.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.ConfigurationService.pdb
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.OSGi.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.OSGi.xml
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\obj\Debug\UIShell.ConfigurationService.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\obj\Debug\UIShell.ConfigurationService.pdb
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.ConfigurationService.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.ConfigurationService.pdb
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.OSGi.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\bin\UIShell.OSGi.xml
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\obj\Debug\UIShell.ConfigurationService.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.ConfigurationService\obj\Debug\UIShell.ConfigurationService.pdb

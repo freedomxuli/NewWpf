@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="WPF 界面框架插件" SymbolicName="UIShell.WpfShellPlugin" Version="1.0.0.7" InitializedState="Active" StartLevel="2">
+  <Activator Type="UIShell.WpfShellPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\UIShell.WpfShellPlugin.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="bin\FirstFloor.ModernUI.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="lib\Microsoft.Windows.Shell.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="lib\System.Windows.Interactivity.dll" Share="true" MultipleVersions="false" />
+    <Assembly Path="lib\Microsoft.Expression.Interactions.dll" Share="true" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="UIShell.NavigationService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.ConfigurationService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.PermissionService" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="false" />
+  </Extension>
+</Bundle>

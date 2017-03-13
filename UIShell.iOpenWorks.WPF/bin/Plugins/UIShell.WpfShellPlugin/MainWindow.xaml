@@ -1,0 +1,13 @@
+﻿<mui:ModernWindow x:Class="UIShell.WpfShellPlugin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI" 
+        WindowStartupLocation="CenterScreen" SizeChanged="ModernWindow_SizeChanged"
+        Title="力殿下框架" TitleFontSize="32"
+        
+        IconHeight="60"
+        ContentSource="UIShell.WpfShellPlugin@UIShell.WpfShellPlugin.Pages.Layout"
+        Loaded="ModernWindow_Loaded" Closing="ModernWindow_Closing">
+    
+</mui:ModernWindow>
+<!--Icon="/UIShell.WpfShellPlugin;component/Assets/iOpenWorksLogo.png"-->

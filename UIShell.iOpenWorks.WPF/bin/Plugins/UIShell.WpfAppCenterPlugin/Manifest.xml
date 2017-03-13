@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="WPF 插件中心插件" SymbolicName="UIShell.WpfAppCenterPlugin" Version="1.0.0.8" InitializedState="Active">
+  <Activator Type="UIShell.WpfAppCenterPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\UIShell.WpfAppCenterPlugin.dll" Share="false" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="UIShell.BundleManagementService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.WpfShellPlugin" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="UIShell.NavigationService">
+    <Node Name="插件中心" Icon="/UIShell.WpfAppCenterPlugin;component/Assets/Repository1.png" Order="500">
+      <Node Name="插件管理" Permission="BundleManagementPermission" Value="UIShell.WpfAppCenterPlugin.BundleManagementUserControl" Icon="/UIShell.WpfAppCenterPlugin;component/Assets/Bundle.png" Order="1" />
+      <Node Name="公共仓库" Permission="AppCenterPermission" Value="UIShell.WpfAppCenterPlugin.AppCenterUserControl" Icon="/UIShell.WpfAppCenterPlugin;component/Assets/Repository4.png" Order="2" />
+      <Node Name="私有仓库" Permission="AppCenterPermission" Value="UIShell.WpfAppCenterPlugin.PrivateAppCenterUserControl" Icon="/UIShell.WpfAppCenterPlugin;component/Assets/Repository2.png" Order="3" />
+    </Node>
+  </Extension>
+  <Extension Point="UIShell.PermissionService">
+    <PermissionGroup Id="AppCenterPermissionGroup" Name="插件中心权限">
+      <Permission Id="BundleManagementPermission" Name="插件管理权限" />
+      <Permission Id="AppCenterPermission" Name="插件中心权限" />
+    </PermissionGroup>
+  </Extension>
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="false" AllowToUninstalled="false" />
+  </Extension>
+</Bundle>

@@ -1,0 +1,14 @@
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.NavigationService.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.NavigationService.pdb
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.OSGi.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.PermissionService.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.OSGi.xml
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\obj\Debug\UIShell.NavigationService.dll
+E:\wpf\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\obj\Debug\UIShell.NavigationService.pdb
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.NavigationService.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.NavigationService.pdb
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.OSGi.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.PermissionService.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\bin\UIShell.OSGi.xml
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\obj\Debug\UIShell.NavigationService.dll
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\UIShell.NavigationService\obj\Debug\UIShell.NavigationService.pdb

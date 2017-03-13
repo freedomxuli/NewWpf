@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0E789F7-5065-4C46-9244-1564D3ECE7D6}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UIShell.RbacManagementPlugin</RootNamespace>
+    <AssemblyName>UIShell.RbacManagementPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\..\..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\..\..\packages\MvvmLightLibs.5.0.2.0\lib\net40\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\..\..\packages\MvvmLightLibs.5.0.2.0\lib\net40\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIShell.WpfShellPlugin\lib\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIShell.WpfShellPlugin\lib\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIShell.OSGi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIShell.PermissionService">
+      <HintPath>..\UIShell.PermissionService\bin\UIShell.PermissionService.dll</HintPath>
+    </Reference>
+    <Reference Include="UIShell.RbacPermissionService">
+      <HintPath>..\UIShell.RbacPermissionService\bin\UIShell.RbacPermissionService.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activator.cs" />
+    <Compile Include="AddOrEditUserUserControl.xaml.cs">
+      <DependentUpon>AddOrEditUserUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordUserControl.xaml.cs">
+      <DependentUpon>ChangePasswordUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BoundPasswordBox.cs" />
+    <Compile Include="LoginUserControl.xaml.cs">
+      <DependentUpon>LoginUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RolePermissionUserControl.xaml.cs">
+      <DependentUpon>RolePermissionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermissionUserControl.xaml.cs">
+      <DependentUpon>UserPermissionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\AddOrEditUserViewModel.cs" />
+    <Compile Include="ViewModels\PermissionTreeViewModel.cs" />
+    <Compile Include="ViewModels\RoleManagementViewModel.cs" />
+    <Compile Include="ViewModels\RoleViewModel.cs" />
+    <Compile Include="ViewModels\UserManagementViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AddOrEditUserUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePasswordUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RolePermissionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPermissionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\User.png" />
+    <Resource Include="Assets\Add.png" />
+    <Resource Include="Assets\Delete.png" />
+    <Resource Include="Assets\Edit.png" />
+    <Resource Include="Assets\Exit.png" />
+    <Resource Include="Assets\add_user.png" />
+    <Resource Include="Assets\redo.png" />
+    <Resource Include="Assets\undo.png" />
+    <Resource Include="Assets\save.png" />
+    <Resource Include="Assets\Login.PNG" />
+    <Resource Include="Assets\no.png" />
+    <Resource Include="Assets\yes.png" />
+    <Resource Include="Assets\ChangePassword.png" />
+    <Resource Include="Assets\ChangeUser.png" />
+    <Resource Include="Assets\Role.png" />
+    <Resource Include="Assets\User1.png" />
+    <Resource Include="Assets\User2.png" />
+    <Resource Include="Assets\User3.png" />
+    <Resource Include="Assets\Permission.png" />
+    <Resource Include="Assets\iOpenWorksLogo.png" />
+    <Content Include="Manifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\lib\FirstFloor.ModernUI\FirstFloor.ModernUI.csproj">
+      <Project>{bae311fe-965e-434d-8e9f-02e35a3d1d25}</Project>
+      <Name>FirstFloor.ModernUI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\UIShell.ConfigurationService\UIShell.ConfigurationService.csproj">
+      <Project>{5d395a47-7d0a-4183-9c9c-33df2d24b001}</Project>
+      <Name>UIShell.ConfigurationService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UIShell.WpfShellPlugin\UIShell.WpfShellPlugin.csproj">
+      <Project>{ccc1c0af-fff5-4e7e-b6e8-2e3920fb6bb5}</Project>
+      <Name>UIShell.WpfShellPlugin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

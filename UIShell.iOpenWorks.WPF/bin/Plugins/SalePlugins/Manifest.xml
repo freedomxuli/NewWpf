@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="SalePlugins" SymbolicName="SalePlugins" Version="1.0.0.0" InitializedState="Active" StartLevel="100">
+  <Activator Type="SalePlugins.BundleActivator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\SalePlugins.dll" Share="false" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="UIShell.WpfShellPlugin" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.PermissionService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.ConfigurationService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.DbConnectionFactoryService" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="UIShell.NavigationService">
+    <Node Name="销售管理" Order="480" Icon="/SalePlugins;component/Assets/demo.png">
+      <Node Name="课程合同单" Value="SalePlugins.CourseManagementUserControl" Permission="CourseManagementPermission" Icon="/SalePlugins;component/Assets/demo.png" Order="1" />
+    </Node>
+  </Extension>
+  <Extension Point="UIShell.PermissionService">
+    <PermissionGroup Id="CourseManagementPermissionGroup" Name="销售管理">
+      <Permission Id="CourseManagementPermission" Name="课程合同单" />
+    </PermissionGroup>
+  </Extension>
+</Bundle>

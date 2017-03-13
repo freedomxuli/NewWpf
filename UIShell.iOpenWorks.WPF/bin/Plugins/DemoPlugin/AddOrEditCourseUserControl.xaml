@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="DemoPlugin.AddOrEditCourseUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DemoPlugin.ViewModels"
+             xmlns:utility="clr-namespace:UIShell.WpfShellPlugin.Utility;assembly=UIShell.WpfShellPlugin"
+             mc:Ignorable="d" Name="CurrentAddOrEditCourseUserControl"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:AddOrEditCourseViewModel x:Key="AddOrEditCourseViewModel"></local:AddOrEditCourseViewModel>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <StaticResource ResourceKey="AddOrEditCourseViewModel"/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="编号：" />
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding CourseViewModel.Id, Mode=TwoWay}" Height="28" VerticalAlignment="Top" utility:FocusUtility.AutoFocusAfterLoaded="True" utility:FocusUtility.MoveFocusWhenEnterPressed="True" utility:FocusUtility.SelectAllAfterFocused="True" />
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="名称：" />
+        <TextBox Grid.Column="1" Grid.Row="1" Height="28" Text="{Binding CourseViewModel.Name, Mode=TwoWay}" VerticalAlignment="Top" utility:FocusUtility.MoveFocusWhenEnterPressed="True" utility:FocusUtility.SelectAllAfterFocused="True" />
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button Width="80" Margin="2" Name="YesButton" IsDefault="True" Command="{Binding OkCommand}" CommandParameter="{Binding ElementName=CurrentAddOrEditCourseUserControl}">
+                <DockPanel>
+                    <Image Width="15" Height="15" Stretch="Fill" Margin="0,0,2,0" Source="/DemoPlugin;component/Assets/yes.png" />
+                    <TextBlock VerticalAlignment="center" Text="保存" />
+                </DockPanel>
+            </Button>
+            <Button Width="80" Margin="2" Name="NoButton" IsCancel="True" Command="{Binding CancelCommand}" CommandParameter="{Binding ElementName=CurrentAddOrEditCourseUserControl}">
+                <DockPanel>
+                    <Image Width="15" Height="15" Stretch="Fill" Margin="0,0,2,0" Source="/DemoPlugin;component/Assets/no.png" />
+                    <TextBlock VerticalAlignment="center" Text="取消" />
+                </DockPanel>
+            </Button>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Grid.RowSpan="2" Text="{Binding Error}" Foreground="Red" />
+    </Grid>
+</UserControl>

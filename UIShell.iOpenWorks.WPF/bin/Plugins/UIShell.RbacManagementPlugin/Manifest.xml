@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="RBAC 用户权限管理" SymbolicName="UIShell.RbacManagementPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="UIShell.RbacManagementPlugin.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\UIShell.RbacManagementPlugin.dll" Share="false" MultipleVersions="false" />
+    <Dependency BundleSymbolicName="UIShell.RbacPermissionService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.PermissionService" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.WpfShellPlugin" Resolution="Mandatory" />
+    <Dependency BundleSymbolicName="UIShell.ConfigurationService" Resolution="Mandatory" />
+  </Runtime>
+  <Extension Point="UIShell.NavigationService">
+    <Node Id="2E3614E0-388D-46E4-88A8-42E7CB3B421F" Name="权限管理" Icon="/UIShell.RbacManagementPlugin;component/Assets/Permission.png" Order="490">
+      <Node Name="角色管理" Permission="RoleManagementPermission" Value="UIShell.RbacManagementPlugin.RolePermissionUserControl" Icon="/UIShell.RbacManagementPlugin;component/Assets/Role.png" Order="1" />
+      <Node Name="用户管理" Permission="UserManagementPermission" Value="UIShell.RbacManagementPlugin.UserPermissionUserControl" Icon="/UIShell.RbacManagementPlugin;component/Assets/User2.png" Order="2" />
+    </Node>
+  </Extension>
+  <Extension Point="UIShell.SystemMenu">
+    <Node Name="更换密码" Value="UIShell.RbacManagementPlugin.ChangePasswordUserControl" Icon="/UIShell.RbacManagementPlugin;component/Assets/ChangePassword.png" Order="10" />
+    <Node Name="注销" Value="UIShell.RbacManagementPlugin.LogoutCommand" Icon="/UIShell.RbacManagementPlugin;component/Assets/ChangeUser.png" Order="20" />
+  </Extension>
+  <Extension Point="UIShell.PermissionService">
+    <PermissionGroup Id="PermissionManagementGroup" Name="权限管理权限">
+      <Permission Id="RoleManagementPermission" Name="角色管理" />
+      <Permission Id="UserManagementPermission" Name="用户管理" />
+    </PermissionGroup>
+  </Extension>
+  <Extension Point="UIShell.BundleManagementOptions">
+    <BundleManagementOption AllowToStarted="true" AllowToStopped="true" AllowToUninstalled="false" />
+  </Extension>
+</Bundle>
