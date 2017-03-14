@@ -10,12 +10,20 @@
   </Runtime>
   <Extension Point="UIShell.NavigationService">
     <Node Name="销售管理" Order="480" Icon="/SalePlugins;component/Assets/demo.png">
-      <Node Name="课程合同单" Value="SalePlugins.CourseManagementUserControl" Permission="CourseManagementPermission" Icon="/SalePlugins;component/Assets/demo.png" Order="1" />
+      <Node Name="课程合同单" Icon="/SalePlugins;component/Assets/demo.png" Order="1" >
+        <Node Name="查询" Value="SalePlugins.CourseManagementUserControl" Permission="SaleSearckManagementPermission" Icon="/SalePlugins;component/Assets/demo.png" Order="10" />
+        <Node Name="制单" Value="SalePlugins.SaleMakeDocumentUserControl" Permission="SaleMakeManagementPermission" Icon="/SalePlugins;component/Assets/demo.png" Order="11" />
+        <Node Name="合同收款" Value="SalePlugins.CourseManagementUserControl" Permission="SaleMoneyManagementPermission" Icon="/SalePlugins;component/Assets/demo.png" Order="12" />
+      </Node>
     </Node>
   </Extension>
   <Extension Point="UIShell.PermissionService">
     <PermissionGroup Id="CourseManagementPermissionGroup" Name="销售管理">
-      <Permission Id="CourseManagementPermission" Name="课程合同单" />
+      <PermissionGroup Id="CourseManagementPermissionGroup" Name="课程合同单" >
+        <Permission Id="SaleMakeManagementPermission" Name="制单" />
+        <Permission Id="SaleSearckManagementPermission" Name="查询" />
+        <Permission Id="SaleMoneyManagementPermission" Name="合同收款" />
+      </PermissionGroup>
     </PermissionGroup>
   </Extension>
 </Bundle>

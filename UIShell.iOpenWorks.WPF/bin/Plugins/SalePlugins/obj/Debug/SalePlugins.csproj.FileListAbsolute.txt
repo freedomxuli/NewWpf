@@ -17,6 +17,7 @@ E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\UIShell.NavigationS
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\AutoMapper.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\EntityFramework.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\FirstFloor.ModernUI.pdb
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\FirstFloor.ModernUI.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\GalaSoft.MvvmLight.pdb
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\GalaSoft.MvvmLight.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\GalaSoft.MvvmLight.Extras.pdb
@@ -26,14 +27,16 @@ E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\UIShell.OSGi.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\UIShell.WpfShellPlugin.pdb
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\System.Windows.Interactivity.xml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\UIShell.NavigationService.pdb
-E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins.csprojResolveAssemblyReference.cache
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\bin\zh-CN\FirstFloor.ModernUI.resources.dll
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\AddOrEditCourseUserControl.g.cs
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\CourseManagementUserControl.g.cs
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SaleMakeDocumentUserControl.g.cs
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins_MarkupCompile.cache
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins_MarkupCompile.lref
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\AddOrEditCourseUserControl.baml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\CourseManagementUserControl.baml
+E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SaleMakeDocumentUserControl.baml
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins.g.resources
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins.Properties.Resources.resources
 E:\项目\UIShell.iOpenWorks.WPF\bin\Plugins\SalePlugins\obj\Debug\SalePlugins.csproj.GenerateResource.Cache
